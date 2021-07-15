@@ -4,10 +4,24 @@ Install Prod version External Services ( S3 + DB ), ASG + LB with Valid Certific
 
 # Steps
 
+- Do not forget AWS env data! 
+
+# Packer base
+
+- Template
+- `packer init`
+- `packer build <folder>`
+
+
+# Templates
+
+
+
 # TODO
 
 - [X] define minimum Packer template in HCL
 - [X] test it
+- [ ] move Packer template(s) in sub-folder
 - [ ] create first tests for image - packages like `wget`, `docker`
 - [ ] add test for packes
 - [ ] fail them 
