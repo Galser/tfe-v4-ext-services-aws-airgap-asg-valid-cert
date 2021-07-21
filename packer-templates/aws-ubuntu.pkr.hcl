@@ -8,9 +8,9 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
-  ami_name      = "learn-packer-linux-aws"
-  instance_type = "m5.xlarge"
-  region        = "eu-central-1"
+  ami_name      = "packer-ubuntu-linux-basic"
+  instance_type = var.instance_type
+  region        = var.region
   source_ami_filter {
     filters = {
       name                = "ubuntu/images/*ubuntu-bionic-18.04-amd64-server-*"
@@ -18,14 +18,17 @@ source "amazon-ebs" "ubuntu" {
       virtualization-type = "hvm"
     }
     most_recent = true
-    owners      = ["099720109477"]
+    owners      = [var.canonical_ami_owner_id]
   }
-  ssh_username = "ubuntu"
+  ssh_username = var.ssh_username
 }
 
 build {
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
+ 
+ provisioner "inspec" {
+    profile = "./tests/basic_image"
+  }  
 }
-

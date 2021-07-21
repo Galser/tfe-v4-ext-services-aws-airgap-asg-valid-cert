@@ -1,0 +1,14 @@
+---
+name: packer-tests
+title: Ubuntu Ubuntu Linux Base AMI
+maintainer: Adrii
+copyright: Adrii
+license: MIT
+summary: Verify Ubuntu Linux Base AMI
+version: 0.0.1
+supports:
+  - os-family: linux
+inspec_version: ">= 3.9.0"
+inputs:
+  - name : tfe_ver
+

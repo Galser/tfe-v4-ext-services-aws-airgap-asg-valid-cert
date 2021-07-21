@@ -1,0 +1,5 @@
+---
+name: default_output
+title: Kitchen-Terraform test that module has the output with default value while not input provided
+version: 0.1.0
+
