@@ -27,5 +27,8 @@ build {
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
+ 
+ provisioner "inspec" {
+    profile = "./tests/basic_image"
+  }  
 }
-
