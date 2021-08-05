@@ -24,3 +24,11 @@ variable "region" {
 }
 
 */
+variable "tags" {
+  default = {
+    builder = "packer",
+    author = "guselietov",
+    os = "ubuntu",
+    usedfor = "TFE base"
+  }
+}

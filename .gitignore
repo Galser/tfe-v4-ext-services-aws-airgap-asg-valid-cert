@@ -30,3 +30,9 @@ override.tf.json
 
 # Gemfile
 Gemfile.lock
+
+# Temp
+temp/*
+
+# TFE AirGaps
+*.airgap
